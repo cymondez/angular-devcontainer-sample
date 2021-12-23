@@ -5,14 +5,19 @@
 ## 使用 container 建立Angular專案
 
 1. 建立專案資料夾
+
 2. 將 `.devcontainer`
 
     ```shell
     # 僅使用 docker
-    git clone https://github.com/cymondez/angular-devcontainer-sample.git/docker-only/.devcontainer
+    git clone https://github.com/cymondez/angular-devcontainer-sample.git
+    cd angular-devcontainer-sample/docker-only
+    cp .devcontainer /<your project path>/
 
     # 使用 docker-compose
-    git clone https://github.com/cymondez/angular-devcontainer-sample.git/docker-compose/.devcontainer
+    git clone https://github.com/cymondez/angular-devcontainer-sample.git/
+    cd angular-devcontainer-sample/docker-compose
+    cp .devcontainer /<your project path>/
     ```
 
 3. 使用 VSCode 開啟專案資料夾，設定ng-cli的版本
@@ -62,10 +67,14 @@ ng new [Your ProjectName] --directory .
 
     ```shell
     # 僅使用 docker
-    git clone https://github.com/cymondez/angular-devcontainer-sample.git/docker-only/.devcontainer
+    git clone https://github.com/cymondez/angular-devcontainer-sample.git
+    cd angular-devcontainer-sample/docker-only
+    cp .devcontainer /<your project path>/
 
     # 使用 docker-compose
-    git clone https://github.com/cymondez/angular-devcontainer-sample.git/docker-compose/.devcontainer
+    git clone https://github.com/cymondez/angular-devcontainer-sample.git/
+    cd angular-devcontainer-sample/docker-compose
+    cp .devcontainer /<your project path>/
     ```
 
 2. 使用 VSCode 開啟專案資料夾 並 設定 .devcontainer/devcontainer.json 內的 ng-cli 版本與現有專案相同
