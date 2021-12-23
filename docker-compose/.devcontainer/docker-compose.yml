@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        ANGULAR_CLI_VER: 13.1.0
+
+    volumes:
+      # for linux development platform
+      # - '/var/run/docker.sock:/var/run/docker.sock'
+
+      # for windows development platform
+      - '//var/run/docker.sock:/var/run/docker.sock'
+
+      # This is where VS Code should expect to find your project's source code and the value of "workspaceFolder" in .devcontainer/devcontainer.json
+      - ..:/workspace:cached
+    # 使用 docker-compose 進行 dev conainer 一定要加這行，避免容器主程序執行結束而退出。
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+

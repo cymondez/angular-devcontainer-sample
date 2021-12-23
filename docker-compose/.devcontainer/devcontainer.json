@@ -1,0 +1,67 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.166.1/containers/typescript-node
+{
+  "name": "angular13-devconatiner-sample",
+  // Update the 'dockerComposeFile' list if you have more compose files or use different names.
+  "dockerComposeFile": "docker-compose.yml",
+  // The 'service' property is the name of the service for the container that VS Code should
+  // use. Update this value and .devcontainer/docker-compose.yml to the real service name.
+  "service": "app",
+  // The optional 'workspaceFolder' property is the path VS Code should open by default when
+  // connected. This is typically a volume mount in .devcontainer/docker-compose.yml
+  "workspaceFolder": "/workspace",
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "/bin/zsh"
+  },
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "Angular.ng-template",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "CodeStream.codestream",
+    "codezombiech.gitignore",
+    "cyrilletuzi.angular-schematics",
+    "davidbabel.vscode-simpler-icons",
+    "dbaeumer.vscode-eslint",
+    "DeepInThought.vscode-shell-snippets",
+    "doggy8088.angular-extension-pack",
+    "donjayamanne.githistory",
+    "eamodio.gitlens",
+    "EditorConfig.EditorConfig",
+    "eg2.tslint",
+    "formulahendry.auto-rename-tag",
+    "foxundermoon.shell-format",
+    "howardzuo.vscode-git-tags",
+    "IJustDev.gitea-vscode",
+    "infinity1207.angular2-switcher",
+    "johnpapa.Angular2",
+    "krizzdewizz.refactorix",
+    "leizongmin.node-module-intellisense",
+    "MariusAlchimavicius.json-to-ts",
+    "Mikael.Angular-BeastCode",
+    "ms-azuretools.vscode-docker",
+    "MS-CEINTL.vscode-language-pack-zh-hant",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "ms-vsliveshare.vsliveshare",
+    "ms-vsliveshare.vsliveshare-audio",
+    "ms-vsliveshare.vsliveshare-pack",
+    "nhoizey.gremlins",
+    "obenjiro.arrr",
+    "p1c2u.docker-compose",
+    "piotrpalarz.vscode-gitignore-generator",
+    "quicktype.quicktype",
+    "redhat.vscode-yaml",
+    "steoates.autoimport",
+    "stringham.move-ts",
+    "wayou.vscode-todo-highlight",
+    "xabikos.JavaScriptSnippets",
+  ],
+  
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [4200],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "./.devcontainer/scripts/postCreateCommand.sh",
+  // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "root"
+}
